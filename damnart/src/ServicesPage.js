@@ -23,28 +23,28 @@ const services = [
     description: 'Craft a user-friendly, high-performing website to achieve your business goals.',
     icon: '🌐',
     color: '#8b5cf6',
-    link: '/#contact'
+    link: '/webdev'
   },
   { 
     title: 'Content Writing', 
     description: 'Create compelling content that engages your audience and boosts conversions.',
     icon: '✍️',
     color: '#f59e0b',
-    link: '/#contact'
+    link: '/contentwriting'
   },
   { 
     title: 'Graphic Designing', 
     description: 'Design eye-catching visuals that effectively communicate your brand message.',
     icon: '🎨',
     color: '#ec4899',
-    link: '/#contact'
+    link: '/graphicdesign'
   },
   { 
     title: 'SEO', 
     description: 'Improve your search ranking and attract qualified leads organically.',
     icon: '🔍',
     color: '#10b981',
-    link: '/#contact'
+    link: '/seo'
   },
   { 
     title: 'Training Courses', 
@@ -58,28 +58,28 @@ const services = [
     description: 'Maximize ROI with a Data-Driven Digital Marketing Performance Audit',
     icon: '📊',
     color: '#14b8a6',
-    link: '/#contact'
+    link: '/audit'
   },
   { 
     title: 'Data Mining', 
     description: 'Extract Actionable Insights with Advanced Data Mining Solutions!',
     icon: '⛏️',
     color: '#f97316',
-    link: '/#contact'
+    link: '/datamining'
   },
   { 
     title: 'Lead Generation', 
     description: 'Generate High-Quality Leads & Boost Conversions Effortlessly',
     icon: '🎯',
     color: '#ef4444',
-    link: '/#contact'
+    link: '/leadgeneration'
   },
   { 
     title: 'Pay Per Valid', 
-    description: 'Maximize ROI with a Data-Driven Digital Marketing Performance Audit',
+    description: 'Only Pay for What Matters – Real, Valid Leads!',
     icon: '✅',
     color: '#22c55e',
-    link: '/#contact'
+    link: '/paypervalid'
   },
   { 
     title: 'Influencer Marketing', 

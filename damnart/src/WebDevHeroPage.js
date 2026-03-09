@@ -3,76 +3,97 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './App.css';
 
-const smmPlatforms = [
+const webDevServices = [
   {
-    name: 'Facebook Management',
-    description: 'Versatile social platform for engaging with a broad audience through posts, ads, and community building.',
-    icon: '📘',
-    features: ['Content Creation', 'Community Management', 'Ad Campaign Management', 'Analytics & Reporting']
+    title: 'Custom Website Development',
+    description: 'Tailored websites built to your unique business needs.',
+    icon: '🎨',
+    features: ['Bespoke Design', 'Scalable Solutions', 'Responsive Design']
   },
   {
-    name: 'Instagram Management',
-    description: 'Visual-centric platform perfect for creative storytelling, brand visuals, and engaging a younger audience.',
-    icon: '📸',
-    features: ['Visual Content Creation', 'Hashtag Strategy', 'Influencer Collaboration', 'Performance Tracking']
+    title: 'E-Commerce Development',
+    description: 'Powerful online stores that drive sales and conversions.',
+    icon: '🛒',
+    features: ['Platform Selection', 'Secure Payments', 'Inventory Management']
   },
   {
-    name: 'LinkedIn Management',
-    description: 'Professional networking platform ideal for B2B marketing, industry insights, and corporate branding.',
-    icon: '💼',
-    features: ['Profile Optimization', 'Network Building', 'LinkedIn Ads', 'Analytics & Insights']
+    title: 'CMS Development',
+    description: 'Easy-to-manage content systems for non-technical users.',
+    icon: '📝',
+    features: ['WordPress/Joomla/Drupal', 'Custom Templates', 'Plugin Integration']
+  },
+  {
+    title: 'Web Application Development',
+    description: 'Complex web solutions tailored to specific business workflows.',
+    icon: '💻',
+    features: ['Custom Web Apps', 'SaaS Solutions', 'API Development']
   }
 ];
 
-const platformDetails = [
+const developmentDetails = [
   {
-    name: 'Facebook Management',
-    fullDescription: 'Facebook remains one of the most powerful platforms for reaching a diverse audience. Our Facebook management services include:',
+    title: 'Custom Website Development',
+    description: 'Our custom website development services ensure your website is tailored to your unique business needs and objectives. We offer:',
     points: [
-      'Content Creation and Curation: Craft engaging posts, images, and videos that resonate with your audience.',
-      'Page Optimization: Optimize your Facebook page to ensure it reflects your brand and attracts followers.',
-      'Community Management: Engage with your audience through comments, messages, and community posts.',
-      'Ad Campaign Management: Create and manage targeted ad campaigns to reach your specific audience.',
-      'Analytics and Reporting: Monitor and analyze your page\'s performance to inform future strategies.'
+      'Bespoke Design: Create a unique and visually appealing design that aligns with your brand identity.',
+      'Scalable Solutions: Develop websites that can grow with your business, accommodating future expansion and functionality.',
+      'Responsive Design: Ensure your website is fully responsive, providing an optimal viewing experience across all devices.'
     ]
   },
   {
-    name: 'Instagram Management',
-    fullDescription: 'Instagram is a visually-driven platform perfect for showcasing your brand\'s personality and products. Our Instagram management services include:',
+    title: 'E-Commerce Development',
+    description: 'For businesses looking to sell products or services online, our e-commerce development services include:',
     points: [
-      'Visual Content Creation: Develop high-quality images, videos, and stories that capture attention.',
-      'Hashtag Strategy: Implement effective hashtag strategies to increase your post visibility.',
-      'Engagement: Foster community engagement through likes, comments, and direct messages.',
-      'Influencer Collaboration: Partner with relevant influencers to amplify your brand reach.',
-      'Performance Tracking: Analyze key metrics to measure success and refine your strategy.'
+      'Platform Selection: Choose the best e-commerce platform for your needs, whether it\'s Shopify, WooCommerce, Magento, or another solution.',
+      'Custom Shopping Cart: Develop a user-friendly and secure shopping cart that enhances the purchasing experience.',
+      'Payment Gateway Integration: Integrate secure payment gateways to facilitate smooth transactions.',
+      'Product Management: Implement robust product management systems to easily add, update, and manage your inventory.',
+      'Order Tracking: Enable order tracking functionality to keep customers informed about their purchases.'
     ]
   },
   {
-    name: 'LinkedIn Management',
-    fullDescription: 'LinkedIn is the premier platform for B2B marketing, offering opportunities to connect with professionals and industry leaders. Our LinkedIn management services include:',
+    title: 'CMS Development',
+    description: 'A Content Management System (CMS) allows you to easily manage and update your website content. Our CMS development services include:',
     points: [
-      'Profile Optimization: Enhance your LinkedIn profile to showcase your brand\'s expertise and attract connections.',
-      'Content Strategy: Create and share valuable content that positions your brand as a thought leader.',
-      'Network Building: Grow your professional network by connecting with potential clients, partners, and influencers.',
-      'LinkedIn Ads: Develop and manage targeted ad campaigns to reach decision-makers in your industry.',
-      'Analytics and Insights: Monitor your LinkedIn activity to gain insights and improve your strategy.'
+      'Platform Expertise: Develop websites on popular CMS platforms like WordPress, Joomla, and Drupal.',
+      'Custom Templates: Create custom templates and themes that match your brand\'s aesthetic and functionality needs.',
+      'User-Friendly Interface: Design an intuitive backend interface for easy content management without technical expertise.',
+      'Plugin Integration: Integrate essential plugins and extensions to enhance your website\'s functionality.'
+    ]
+  },
+  {
+    title: 'Web Application Development',
+    description: 'For businesses requiring more complex solutions, our web application development services include:',
+    points: [
+      'Custom Web Apps: Develop tailored web applications that address specific business needs and workflows.',
+      'SaaS Solutions: Create Software as a Service (SaaS) applications that can be accessed and used over the internet.',
+      'API Development: Develop and integrate APIs to ensure seamless interaction between different software systems.',
+      'Cloud Integration: Utilize cloud services to enhance the scalability and accessibility of your web applications.'
     ]
   }
 ];
 
-const processSteps = [
-  { number: '01', title: 'Strategy Development', description: 'We analyze your brand and target audience to create a customized SMM strategy.' },
-  { number: '02', title: 'Content Planning', description: 'Our team creates engaging content calendars tailored to each platform.' },
-  { number: '03', title: 'Content Creation', description: 'We design compelling visuals, videos, and copy that resonate with your audience.' },
-  { number: '04', title: 'Launch & Engage', description: 'Your content goes live, and we actively engage with your community.' },
-  { number: '05', title: 'Analytics & Optimization', description: 'We provide detailed reports and refine strategies to maximize engagement.' }
+const maintenanceServices = [
+  { title: 'Regular Updates', description: 'Keep your website\'s software, plugins, and themes updated to the latest versions.', icon: '🔄' },
+  { title: 'Security Monitoring', description: 'Implement and monitor security measures to protect your website from threats.', icon: '🛡️' },
+  { title: 'Performance Optimization', description: 'Ensure fast load times and a smooth user experience.', icon: '⚡' },
+  { title: 'Content Updates', description: 'Assist with regular content updates to keep your website fresh.', icon: '📰' },
+  { title: 'Backup and Recovery', description: 'Perform regular backups and establish recovery protocols.', icon: '💾' }
+];
+
+const seoServices = [
+  { title: 'Clean Code', description: 'Write clean, efficient code that enhances site speed and search engine crawlability.' },
+  { title: 'Meta Tags Optimization', description: 'Optimize meta tags, titles, and descriptions to improve search rankings.' },
+  { title: 'URL Structure', description: 'Create SEO-friendly URLs that include relevant keywords.' },
+  { title: 'Mobile Optimization', description: 'Ensure your website is mobile-friendly with mobile-first indexing.' },
+  { title: 'Schema Markup', description: 'Implement structured data to provide detailed content information.' }
 ];
 
 const whyChooseUs = [
-  { title: 'Expert Team', description: 'Certified professionals with years of experience in social media management.', icon: '🏆' },
-  { title: 'Data-Driven', description: 'Every decision backed by analytics and real-time engagement insights.', icon: '📈' },
-  { title: 'Custom Strategies', description: 'Tailored solutions that align with your unique brand identity.', icon: '🎯' },
-  { title: 'Proven Results', description: '500+ successful campaigns with measurable engagement for clients.', icon: '⭐' },
+  { title: 'Expert Developers', description: 'Certified professionals with years of experience in web development.', icon: '🏆' },
+  { title: 'Data-Driven', description: 'Every decision backed by analytics and performance insights.', icon: '📈' },
+  { title: 'Custom Solutions', description: 'Tailored solutions that align with your unique brand identity.', icon: '🎯' },
+  { title: 'Proven Results', description: '500+ successful websites with measurable performance for clients.', icon: '⭐' },
 ];
 
 function AnimatedBackground() {
@@ -113,10 +134,10 @@ function Navbar({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
   );
 }
 
-function SMMHeroPage() {
+function WebDevHeroPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activePlatform, setActivePlatform] = useState(0);
+  const [activeService, setActiveService] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -135,7 +156,7 @@ function SMMHeroPage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActivePlatform((prev) => (prev + 1) % smmPlatforms.length);
+      setActiveService((prev) => (prev + 1) % webDevServices.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -151,7 +172,7 @@ function SMMHeroPage() {
 
       <section className="smm-hero">
         <video autoPlay loop muted playsInline className="hero-video">
-          <source src="https://res.cloudinary.com/dadofd9d2/video/upload/v1773029543/grok-video-50f1898c-a59c-45a0-bf67-47fae3472933_yhxppr.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dadofd9d2/video/upload/v1773030455/grok-video-d319be8b-cfd8-4387-9380-8db92fb62533_u5ri8n.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay"></div>
         <div className="floating-shapes">
@@ -167,14 +188,14 @@ function SMMHeroPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="hero-badge">
-              <span>✦</span> SMM Services
+              <span>✦</span> Web Development Services
             </div>
             <h1 className="hero-title">
-              <span className="line">Social Media</span>
-              <span className="line highlight">Management</span>
+              <span className="line">Don't Just Post, Engage:</span>
+              <span className="line highlight">Elevate Your Brand</span>
             </h1>
             <p className="hero-tagline">
-              Don't Just Post, Engage: Elevate Your Brand with Strategic Social Media Management
+              Build Powerful, Scalable, and User-Friendly Websites That Drive Real Results
             </p>
             <div className="hero-cta">
               <Link to="/contact" className="btn-primary">Get a Quote</Link>
@@ -193,25 +214,25 @@ function SMMHeroPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2>Social Media Platforms</h2>
-            <p>We manage your presence on all major social media platforms</p>
+            <h2>Web Development Services We Provide</h2>
+            <p>Comprehensive web solutions tailored to your business needs</p>
           </motion.div>
           <div className="smm-platforms-grid">
-            {smmPlatforms.map((platform, index) => (
+            {webDevServices.map((service, index) => (
               <motion.div 
-                key={platform.name}
-                className={`smm-platform-card ${activePlatform === index ? 'active' : ''}`}
+                key={service.title}
+                className={`smm-platform-card ${activeService === index ? 'active' : ''}`}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                onClick={() => setActivePlatform(index)}
+                onClick={() => setActiveService(index)}
               >
-                <span className="smm-platform-icon">{platform.icon}</span>
-                <h3>{platform.name}</h3>
-                <p>{platform.description}</p>
+                <span className="smm-platform-icon">{service.icon}</span>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
                 <div className="smm-platform-features">
-                  {platform.features.slice(0, 2).map((feature, i) => (
+                  {service.features.slice(0, 2).map((feature, i) => (
                     <span key={i} className="feature-tag">{feature}</span>
                   ))}
                 </div>
@@ -223,9 +244,9 @@ function SMMHeroPage() {
 
       <section className="smm-details-section">
         <div className="container">
-          {platformDetails.map((platform, index) => (
+          {developmentDetails.map((detail, index) => (
             <motion.div 
-              key={platform.name}
+              key={detail.title}
               className="smm-detail-card"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -233,12 +254,12 @@ function SMMHeroPage() {
               transition={{ delay: index * 0.1 }}
             >
               <div className="smm-detail-header">
-                <span className="smm-detail-icon">{smmPlatforms[index].icon}</span>
-                <h3>{platform.name}</h3>
+                <span className="smm-detail-icon">{webDevServices[index].icon}</span>
+                <h3>{detail.title}</h3>
               </div>
-              <p className="smm-detail-desc">{platform.fullDescription}</p>
+              <p className="smm-detail-desc">{detail.description}</p>
               <ul className="smm-detail-list">
-                {platform.points.map((point, i) => (
+                {detail.points.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
               </ul>
@@ -256,25 +277,48 @@ function SMMHeroPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2>SMM Process Timeline</h2>
-            <p>Our proven process ensures maximum engagement</p>
+            <h2>Website Maintenance & Support</h2>
+            <p>Keeping your website running at peak performance</p>
           </motion.div>
           <div className="smm-process-grid">
-            {processSteps.map((step, index) => (
+            {maintenanceServices.map((service, index) => (
               <motion.div 
-                key={step.number}
+                key={service.title}
                 className="smm-process-card"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <span className="process-number">{step.number}</span>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
+                <span className="maintenance-icon">{service.icon}</span>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="smm-details-section">
+        <div className="container">
+          <motion.div 
+            className="smm-detail-card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="smm-detail-header">
+              <span className="smm-detail-icon">🔍</span>
+              <h3>SEO-Friendly Development</h3>
+            </div>
+            <p className="smm-detail-desc">Developing your website with SEO best practices in mind ensures better visibility on search engines. Our SEO-friendly development services include:</p>
+            <ul className="smm-detail-list">
+              {seoServices.map((service, i) => (
+                <li key={i}><strong>{service.title}:</strong> {service.description}</li>
+              ))}
+            </ul>
+            <Link to="/contact" className="btn-primary">Get a Quote</Link>
+          </motion.div>
         </div>
       </section>
 
@@ -324,8 +368,8 @@ function SMMHeroPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2>Ready to Boost Your Social Media Presence?</h2>
-              <p>Let's create a customized SMM strategy that drives engagement.</p>
+              <h2>Ready to Build Your Website?</h2>
+              <p>Let's create a customized web development solution that drives results.</p>
               <Link to="/contact" className="btn-primary">GET A FREE CONSULTATION</Link>
             </motion.div>
             <motion.div 
@@ -427,4 +471,4 @@ function SMMHeroPage() {
   );
 }
 
-export default SMMHeroPage;
+export default WebDevHeroPage;

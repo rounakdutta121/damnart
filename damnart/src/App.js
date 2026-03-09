@@ -7,19 +7,27 @@ import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import PPCHeroPage from './PPCHeroPage';
 import SMMHeroPage from './SMMHeroPage';
+import WebDevHeroPage from './WebDevHeroPage';
+import ContentHeroPage from './ContentHeroPage';
+import GraphicHeroPage from './GraphicHeroPage';
+import SEOHeroPage from './SEOHeroPage';
+import AuditHeroPage from './AuditHeroPage';
+import DataMiningHeroPage from './DataMiningHeroPage';
+import LeadGenerationHeroPage from './LeadGenerationHeroPage';
+import PayPerValidHeroPage from './PayPerValidHeroPage';
 
 const services = [
   { title: 'PPC', description: 'Drive targeted traffic to your website and increase conversions with PPC ads.', icon: '💰', link: '/ppc' },
   { title: 'SMM', description: 'Grow your brand awareness and engagement on social media platforms.', icon: '📱', link: '/smm' },
-  { title: 'Web Development', description: 'Craft a user-friendly, high-performing website to achieve your business goals.', icon: '🌐', link: '/#contact' },
-  { title: 'Content Writing', description: 'Create compelling content that engages your audience and boosts conversions.', icon: '✍️', link: '/#contact' },
-  { title: 'Graphic Designing', description: 'Design eye-catching visuals that effectively communicate your brand message.', icon: '🎨', link: '/#contact' },
-  { title: 'SEO', description: 'Improve your search ranking and attract qualified leads organically.', icon: '🔍', link: '/#contact' },
+  { title: 'Web Development', description: 'Craft a user-friendly, high-performing website to achieve your business goals.', icon: '🌐', link: '/webdev' },
+  { title: 'Content Writing', description: 'Create compelling content that engages your audience and boosts conversions.', icon: '✍️', link: '/contentwriting' },
+  { title: 'Graphic Designing', description: 'Design eye-catching visuals that effectively communicate your brand message.', icon: '🎨', link: '/graphicdesign' },
+  { title: 'SEO', description: 'Improve your search ranking and attract qualified leads organically.', icon: '🔍', link: '/seo' },
   { title: 'Training Courses', description: "We offers a wide range of training courses in Digital Marketing and AI Tools", icon: '📚', link: '/#contact' },
-  { title: 'Digital Marketing Audit', description: 'Maximize ROI with a Data-Driven Digital Marketing Performance Audit', icon: '📊', link: '/#contact' },
-  { title: 'Data Mining', description: 'Extract Actionable Insights with Advanced Data Mining Solutions!', icon: '⛏️', link: '/#contact' },
-  { title: 'Lead Generation', description: 'Generate High-Quality Leads & Boost Conversions Effortlessly', icon: '🎯', link: '/#contact' },
-  { title: 'Pay Per Valid', description: 'Maximize ROI with a Data-Driven Digital Marketing Performance Audit', icon: '✅', link: '/#contact' },
+  { title: 'Digital Marketing Audit', description: 'Maximize ROI with a Data-Driven Digital Marketing Performance Audit', icon: '📊', link: '/audit' },
+  { title: 'Data Mining', description: 'Extract Actionable Insights with Advanced Data Mining Solutions!', icon: '⛏️', link: '/datamining' },
+  { title: 'Lead Generation', description: 'Generate High-Quality Leads & Boost Conversions Effortlessly', icon: '🎯', link: '/leadgeneration' },
+  { title: 'Pay Per Valid', description: 'Only Pay for What Matters – Real, Valid Leads!', icon: '✅', link: '/paypervalid' },
   { title: 'Influencer Marketing', description: 'Extract Actionable Insights with Advanced Data Mining Solutions', icon: '🌟', link: '/#contact' },
 ];
 
@@ -134,14 +142,14 @@ function Hero() {
   const serviceTags = [
     { name: 'PPC', link: '/ppc' },
     { name: 'SMM', link: '/smm' },
-    { name: 'Web Development', link: '/#contact' },
-    { name: 'Content Writing', link: '/#contact' },
-    { name: 'Graphic Designing', link: '/#contact' },
-    { name: 'SEO', link: '/#contact' },
-    { name: 'Data Mining', link: '/#contact' },
-    { name: 'Lead Generation', link: '/#contact' },
+    { name: 'Web Development', link: '/webdev' },
+    { name: 'Content Writing', link: '/contentwriting' },
+    { name: 'Graphic Designing', link: '/graphicdesign' },
+    { name: 'SEO', link: '/seo' },
+    { name: 'Data Mining', link: '/datamining' },
+    { name: 'Lead Generation', link: '/leadgeneration' },
     { name: 'Newsletter Automation with AI', link: '/#contact' },
-    { name: 'Digital Marketing Audit', link: '/#contact' },
+    { name: 'Digital Marketing Audit', link: '/audit' },
   ];
 
   return (
@@ -731,6 +739,14 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/ppc" element={<PPCHeroPage />} />
         <Route path="/smm" element={<SMMHeroPage />} />
+        <Route path="/webdev" element={<WebDevHeroPage />} />
+        <Route path="/contentwriting" element={<ContentHeroPage />} />
+        <Route path="/graphicdesign" element={<GraphicHeroPage />} />
+        <Route path="/seo" element={<SEOHeroPage />} />
+        <Route path="/audit" element={<AuditHeroPage />} />
+        <Route path="/datamining" element={<DataMiningHeroPage />} />
+        <Route path="/leadgeneration" element={<LeadGenerationHeroPage />} />
+        <Route path="/paypervalid" element={<PayPerValidHeroPage />} />
       </Routes>
     </Router>
   );

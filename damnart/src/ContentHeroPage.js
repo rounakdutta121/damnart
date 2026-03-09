@@ -3,76 +3,113 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './App.css';
 
-const smmPlatforms = [
+const contentServices = [
   {
-    name: 'Facebook Management',
-    description: 'Versatile social platform for engaging with a broad audience through posts, ads, and community building.',
-    icon: '📘',
-    features: ['Content Creation', 'Community Management', 'Ad Campaign Management', 'Analytics & Reporting']
+    title: 'Blog Writing',
+    description: 'Drive traffic and establish expertise with compelling blogs.',
+    icon: '📝',
+    features: ['Topic Research', 'SEO Optimization', 'Engaging Content']
   },
   {
-    name: 'Instagram Management',
-    description: 'Visual-centric platform perfect for creative storytelling, brand visuals, and engaging a younger audience.',
-    icon: '📸',
-    features: ['Visual Content Creation', 'Hashtag Strategy', 'Influencer Collaboration', 'Performance Tracking']
+    title: 'Website Content',
+    description: 'Make strong first impressions with professional website content.',
+    icon: '🌐',
+    features: ['Home Page', 'About Us', 'Product Descriptions']
   },
   {
-    name: 'LinkedIn Management',
-    description: 'Professional networking platform ideal for B2B marketing, industry insights, and corporate branding.',
-    icon: '💼',
-    features: ['Profile Optimization', 'Network Building', 'LinkedIn Ads', 'Analytics & Insights']
+    title: 'Social Media Content',
+    description: 'Boost engagement with platform-specific social content.',
+    icon: '📱',
+    features: ['Platform-Specific', 'Content Calendars', 'Visual Integration']
+  },
+  {
+    title: 'SEO Content',
+    description: 'Improve rankings with optimized SEO content.',
+    icon: '🔍',
+    features: ['Keyword Research', 'On-Page SEO', 'Long-Form Content']
+  },
+  {
+    title: 'Product Descriptions',
+    description: 'Drive sales with compelling product copy.',
+    icon: '🛍️',
+    features: ['Feature Highlighting', 'Persuasive Copy', 'SEO Integration']
+  },
+  {
+    title: 'Email Newsletters',
+    description: 'Keep audience engaged with valuable email content.',
+    icon: '📧',
+    features: ['Content Planning', 'Engaging Subject Lines', 'Clear CTAs']
   }
 ];
 
-const platformDetails = [
+const contentDetails = [
   {
-    name: 'Facebook Management',
-    fullDescription: 'Facebook remains one of the most powerful platforms for reaching a diverse audience. Our Facebook management services include:',
+    title: 'Blog Writing',
+    description: 'Blogs are a powerful tool for driving traffic to your website and establishing your expertise. Our blog writing services include:',
     points: [
-      'Content Creation and Curation: Craft engaging posts, images, and videos that resonate with your audience.',
-      'Page Optimization: Optimize your Facebook page to ensure it reflects your brand and attracts followers.',
-      'Community Management: Engage with your audience through comments, messages, and community posts.',
-      'Ad Campaign Management: Create and manage targeted ad campaigns to reach your specific audience.',
-      'Analytics and Reporting: Monitor and analyze your page\'s performance to inform future strategies.'
+      'Topic Research: Identify relevant and trending topics that resonate with your audience.',
+      'SEO Optimization: Integrate keywords seamlessly to improve search engine rankings.',
+      'Engaging Content: Create informative and engaging blog posts that capture readers\' interest.',
+      'Consistent Posting: Develop a content calendar and ensure regular posting to keep your audience engaged.'
     ]
   },
   {
-    name: 'Instagram Management',
-    fullDescription: 'Instagram is a visually-driven platform perfect for showcasing your brand\'s personality and products. Our Instagram management services include:',
+    title: 'Website Content',
+    description: 'Your website content is crucial for making a strong first impression. Our website content writing services include:',
     points: [
-      'Visual Content Creation: Develop high-quality images, videos, and stories that capture attention.',
-      'Hashtag Strategy: Implement effective hashtag strategies to increase your post visibility.',
-      'Engagement: Foster community engagement through likes, comments, and direct messages.',
-      'Influencer Collaboration: Partner with relevant influencers to amplify your brand reach.',
-      'Performance Tracking: Analyze key metrics to measure success and refine your strategy.'
+      'Home Page Content: Craft compelling content that clearly communicates your value proposition.',
+      'About Us Page: Tell your brand story and highlight your mission, vision, and values.',
+      'Service/Product Descriptions: Write detailed and persuasive descriptions that showcase the benefits of your offerings.',
+      'Landing Pages: Create focused landing pages designed to convert visitors into leads or customers.'
     ]
   },
   {
-    name: 'LinkedIn Management',
-    fullDescription: 'LinkedIn is the premier platform for B2B marketing, offering opportunities to connect with professionals and industry leaders. Our LinkedIn management services include:',
+    title: 'Social Media Content',
+    description: 'Effective social media content can boost your online presence and engagement. Our social media content services include:',
     points: [
-      'Profile Optimization: Enhance your LinkedIn profile to showcase your brand\'s expertise and attract connections.',
-      'Content Strategy: Create and share valuable content that positions your brand as a thought leader.',
-      'Network Building: Grow your professional network by connecting with potential clients, partners, and influencers.',
-      'LinkedIn Ads: Develop and manage targeted ad campaigns to reach decision-makers in your industry.',
-      'Analytics and Insights: Monitor your LinkedIn activity to gain insights and improve your strategy.'
+      'Platform-Specific Content: Develop tailored content for various social media platforms like Facebook, Instagram, LinkedIn, and Twitter.',
+      'Content Calendars: Plan and schedule posts to ensure consistent and timely updates.',
+      'Visual Content Integration: Incorporate images, videos, and graphics to enhance your social media posts.',
+      'Community Engagement: Create content that encourages interaction and engagement with your audience.'
+    ]
+  },
+  {
+    title: 'SEO Content',
+    description: 'SEO content is designed to improve your search engine rankings and drive organic traffic. Our SEO content writing services include:',
+    points: [
+      'Keyword Research: Identify high-traffic and relevant keywords for your industry.',
+      'On-Page SEO: Write content optimized for on-page SEO, including meta tags, headings, and internal linking.',
+      'Content Optimization: Update existing content to improve its SEO performance.',
+      'Long-Form Content: Create in-depth articles, guides, and whitepapers that provide value and attract backlinks.'
+    ]
+  },
+  {
+    title: 'Product Descriptions',
+    description: 'Compelling product descriptions can significantly impact your sales. Our product description writing services include:',
+    points: [
+      'Feature Highlighting: Emphasize key features and benefits of your products.',
+      'Persuasive Copy: Write descriptions that persuade and encourage purchases.',
+      'SEO Integration: Incorporate relevant keywords to improve product visibility in search results.',
+      'Consistent Tone: Ensure a consistent tone and style that aligns with your brand.'
+    ]
+  },
+  {
+    title: 'Email Newsletters',
+    description: 'Email newsletters are a great way to keep your audience informed and engaged. Our email newsletter writing services include:',
+    points: [
+      'Content Planning: Develop a content strategy that aligns with your marketing goals.',
+      'Engaging Subject Lines: Craft subject lines that increase open rates.',
+      'Valuable Content: Create informative and engaging content that adds value to your subscribers.',
+      'Call-to-Actions: Include clear and compelling call-to-actions to drive conversions.'
     ]
   }
-];
-
-const processSteps = [
-  { number: '01', title: 'Strategy Development', description: 'We analyze your brand and target audience to create a customized SMM strategy.' },
-  { number: '02', title: 'Content Planning', description: 'Our team creates engaging content calendars tailored to each platform.' },
-  { number: '03', title: 'Content Creation', description: 'We design compelling visuals, videos, and copy that resonate with your audience.' },
-  { number: '04', title: 'Launch & Engage', description: 'Your content goes live, and we actively engage with your community.' },
-  { number: '05', title: 'Analytics & Optimization', description: 'We provide detailed reports and refine strategies to maximize engagement.' }
 ];
 
 const whyChooseUs = [
-  { title: 'Expert Team', description: 'Certified professionals with years of experience in social media management.', icon: '🏆' },
-  { title: 'Data-Driven', description: 'Every decision backed by analytics and real-time engagement insights.', icon: '📈' },
-  { title: 'Custom Strategies', description: 'Tailored solutions that align with your unique brand identity.', icon: '🎯' },
-  { title: 'Proven Results', description: '500+ successful campaigns with measurable engagement for clients.', icon: '⭐' },
+  { title: 'Expert Writers', description: 'Certified professionals with years of experience in content writing.', icon: '🏆' },
+  { title: 'Data-Driven', description: 'Every piece backed by research and SEO best practices.', icon: '📈' },
+  { title: 'Custom Solutions', description: 'Tailored content that aligns with your unique brand voice.', icon: '🎯' },
+  { title: 'Proven Results', description: '500+ successful content campaigns with measurable impact.', icon: '⭐' },
 ];
 
 function AnimatedBackground() {
@@ -113,10 +150,10 @@ function Navbar({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
   );
 }
 
-function SMMHeroPage() {
+function ContentHeroPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activePlatform, setActivePlatform] = useState(0);
+  const [activeService, setActiveService] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -135,7 +172,7 @@ function SMMHeroPage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActivePlatform((prev) => (prev + 1) % smmPlatforms.length);
+      setActiveService((prev) => (prev + 1) % contentServices.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -151,7 +188,7 @@ function SMMHeroPage() {
 
       <section className="smm-hero">
         <video autoPlay loop muted playsInline className="hero-video">
-          <source src="https://res.cloudinary.com/dadofd9d2/video/upload/v1773029543/grok-video-50f1898c-a59c-45a0-bf67-47fae3472933_yhxppr.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dadofd9d2/video/upload/v1773031032/grok-video-291887a7-604f-4b67-a8bc-b7452a1fbfc0_whbriv.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay"></div>
         <div className="floating-shapes">
@@ -167,14 +204,14 @@ function SMMHeroPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="hero-badge">
-              <span>✦</span> SMM Services
+              <span>✦</span> Content Writing Services
             </div>
             <h1 className="hero-title">
-              <span className="line">Social Media</span>
-              <span className="line highlight">Management</span>
+              <span className="line">Don't Just Post, Engage:</span>
+              <span className="line highlight">Elevate Your Brand</span>
             </h1>
             <p className="hero-tagline">
-              Don't Just Post, Engage: Elevate Your Brand with Strategic Social Media Management
+              Professional Content That Engages, Converts, and Builds Your Brand
             </p>
             <div className="hero-cta">
               <Link to="/contact" className="btn-primary">Get a Quote</Link>
@@ -193,25 +230,25 @@ function SMMHeroPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2>Social Media Platforms</h2>
-            <p>We manage your presence on all major social media platforms</p>
+            <h2>Content Writing Services We Provide</h2>
+            <p>Comprehensive content solutions tailored to your business needs</p>
           </motion.div>
           <div className="smm-platforms-grid">
-            {smmPlatforms.map((platform, index) => (
+            {contentServices.map((service, index) => (
               <motion.div 
-                key={platform.name}
-                className={`smm-platform-card ${activePlatform === index ? 'active' : ''}`}
+                key={service.title}
+                className={`smm-platform-card ${activeService === index ? 'active' : ''}`}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                onClick={() => setActivePlatform(index)}
+                onClick={() => setActiveService(index)}
               >
-                <span className="smm-platform-icon">{platform.icon}</span>
-                <h3>{platform.name}</h3>
-                <p>{platform.description}</p>
+                <span className="smm-platform-icon">{service.icon}</span>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
                 <div className="smm-platform-features">
-                  {platform.features.slice(0, 2).map((feature, i) => (
+                  {service.features.slice(0, 2).map((feature, i) => (
                     <span key={i} className="feature-tag">{feature}</span>
                   ))}
                 </div>
@@ -223,9 +260,9 @@ function SMMHeroPage() {
 
       <section className="smm-details-section">
         <div className="container">
-          {platformDetails.map((platform, index) => (
+          {contentDetails.map((detail, index) => (
             <motion.div 
-              key={platform.name}
+              key={detail.title}
               className="smm-detail-card"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -233,48 +270,18 @@ function SMMHeroPage() {
               transition={{ delay: index * 0.1 }}
             >
               <div className="smm-detail-header">
-                <span className="smm-detail-icon">{smmPlatforms[index].icon}</span>
-                <h3>{platform.name}</h3>
+                <span className="smm-detail-icon">{contentServices[index].icon}</span>
+                <h3>{detail.title}</h3>
               </div>
-              <p className="smm-detail-desc">{platform.fullDescription}</p>
+              <p className="smm-detail-desc">{detail.description}</p>
               <ul className="smm-detail-list">
-                {platform.points.map((point, i) => (
+                {detail.points.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
               </ul>
               <Link to="/contact" className="btn-primary">Get a Quote</Link>
             </motion.div>
           ))}
-        </div>
-      </section>
-
-      <section className="smm-process-section">
-        <div className="container">
-          <motion.div 
-            className="section-header"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2>SMM Process Timeline</h2>
-            <p>Our proven process ensures maximum engagement</p>
-          </motion.div>
-          <div className="smm-process-grid">
-            {processSteps.map((step, index) => (
-              <motion.div 
-                key={step.number}
-                className="smm-process-card"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <span className="process-number">{step.number}</span>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -324,8 +331,8 @@ function SMMHeroPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2>Ready to Boost Your Social Media Presence?</h2>
-              <p>Let's create a customized SMM strategy that drives engagement.</p>
+              <h2>Ready to Boost Your Content?</h2>
+              <p>Let's create customized content that drives engagement and conversions.</p>
               <Link to="/contact" className="btn-primary">GET A FREE CONSULTATION</Link>
             </motion.div>
             <motion.div 
@@ -427,4 +434,4 @@ function SMMHeroPage() {
   );
 }
 
-export default SMMHeroPage;
+export default ContentHeroPage;

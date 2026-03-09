@@ -3134,6 +3134,12 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
 }
 
+.smm-hero .container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .smm-hero-content {
   text-align: center;
   max-width: 800px;
@@ -3144,12 +3150,20 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 24px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .smm-hero-content .hero-tagline {
   font-size: 20px;
-  color: var(--text-muted);
+  color: #ffffff !important;
   margin-bottom: 40px;
+  text-align: center !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .smm-hero-content .hero-cta {
@@ -3157,6 +3171,10 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.smm-hero-content .hero-motto {
+  justify-content: center;
 }
 
 .smm-platforms-section {
@@ -3331,6 +3349,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.5;
+}
+
+.maintenance-icon {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 32px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 50%;
+  margin-bottom: 20px;
+  color: #fff;
+  filter: brightness(1.2);
 }
 
 @media (max-width: 1200px) {

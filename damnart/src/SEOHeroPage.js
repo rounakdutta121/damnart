@@ -3,76 +3,117 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './App.css';
 
-const smmPlatforms = [
+const seoServices = [
   {
-    name: 'Facebook Management',
-    description: 'Versatile social platform for engaging with a broad audience through posts, ads, and community building.',
-    icon: '📘',
-    features: ['Content Creation', 'Community Management', 'Ad Campaign Management', 'Analytics & Reporting']
+    title: 'Keyword Research',
+    description: 'Identify the right keywords to drive targeted traffic.',
+    icon: '🔑',
+    features: ['Competitive Analysis', 'Keyword Selection', 'Long-Tail Keywords']
   },
   {
-    name: 'Instagram Management',
-    description: 'Visual-centric platform perfect for creative storytelling, brand visuals, and engaging a younger audience.',
-    icon: '📸',
-    features: ['Visual Content Creation', 'Hashtag Strategy', 'Influencer Collaboration', 'Performance Tracking']
+    title: 'On-Page Optimization',
+    description: 'Optimize content and structure for search engines.',
+    icon: '⚙️',
+    features: ['Meta Tags', 'Content Optimization', 'Internal Linking']
   },
   {
-    name: 'LinkedIn Management',
-    description: 'Professional networking platform ideal for B2B marketing, industry insights, and corporate branding.',
-    icon: '💼',
-    features: ['Profile Optimization', 'Network Building', 'LinkedIn Ads', 'Analytics & Insights']
+    title: 'Technical SEO',
+    description: 'Improve backend performance for better rankings.',
+    icon: '🔧',
+    features: ['Site Speed', 'Mobile Optimization', 'XML Sitemaps']
+  },
+  {
+    title: 'Off-Page Optimization',
+    description: 'Build authority through external activities.',
+    icon: '🔗',
+    features: ['Link Building', 'Social Media', 'Guest Posting']
+  },
+  {
+    title: 'Local SEO',
+    description: 'Attract customers from your geographic area.',
+    icon: '📍',
+    features: ['Google My Business', 'Local Citations', 'Review Management']
+  },
+  {
+    title: 'SEO Analytics',
+    description: 'Track and measure SEO performance.',
+    icon: '📈',
+    features: ['Performance Tracking', 'Monthly Reports', 'Data Insights']
   }
 ];
 
-const platformDetails = [
+const seoDetails = [
   {
-    name: 'Facebook Management',
-    fullDescription: 'Facebook remains one of the most powerful platforms for reaching a diverse audience. Our Facebook management services include:',
+    title: 'Keyword Research',
+    description: 'Identifying the right keywords is the foundation of any successful SEO strategy. Our keyword research services include:',
     points: [
-      'Content Creation and Curation: Craft engaging posts, images, and videos that resonate with your audience.',
-      'Page Optimization: Optimize your Facebook page to ensure it reflects your brand and attracts followers.',
-      'Community Management: Engage with your audience through comments, messages, and community posts.',
-      'Ad Campaign Management: Create and manage targeted ad campaigns to reach your specific audience.',
-      'Analytics and Reporting: Monitor and analyze your page\'s performance to inform future strategies.'
+      'Competitive Analysis: Analyze your competitors to identify high-performing keywords.',
+      'Keyword Selection: Choose the most relevant and high-traffic keywords for your business.',
+      'Long-Tail Keywords: Target specific phrases that attract highly qualified traffic.'
     ]
   },
   {
-    name: 'Instagram Management',
-    fullDescription: 'Instagram is a visually-driven platform perfect for showcasing your brand\'s personality and products. Our Instagram management services include:',
+    title: 'On-Page Optimization',
+    description: 'On-page optimization ensures your website content and structure are search-engine friendly. Our services include:',
     points: [
-      'Visual Content Creation: Develop high-quality images, videos, and stories that capture attention.',
-      'Hashtag Strategy: Implement effective hashtag strategies to increase your post visibility.',
-      'Engagement: Foster community engagement through likes, comments, and direct messages.',
-      'Influencer Collaboration: Partner with relevant influencers to amplify your brand reach.',
-      'Performance Tracking: Analyze key metrics to measure success and refine your strategy.'
+      'Meta Tags Optimization: Optimize title tags, meta descriptions, and headers to improve click-through rates and relevance.',
+      'Content Optimization: Ensure your content is high-quality, keyword-rich, and relevant to user intent.',
+      'Internal Linking: Improve site navigation and link equity distribution by strategically linking to related content.',
+      'URL Structure: Create SEO-friendly URLs that are easy to read and include keywords.',
+      'Image Optimization: Optimize images by using descriptive file names, alt text, and ensuring fast load times.',
+      'User Experience (UX) Enhancements: Improve site usability, navigation, and overall user experience.'
     ]
   },
   {
-    name: 'LinkedIn Management',
-    fullDescription: 'LinkedIn is the premier platform for B2B marketing, offering opportunities to connect with professionals and industry leaders. Our LinkedIn management services include:',
+    title: 'Technical SEO',
+    description: 'Technical SEO focuses on improving the backend aspects of your website to enhance its performance. Our services include:',
     points: [
-      'Profile Optimization: Enhance your LinkedIn profile to showcase your brand\'s expertise and attract connections.',
-      'Content Strategy: Create and share valuable content that positions your brand as a thought leader.',
-      'Network Building: Grow your professional network by connecting with potential clients, partners, and influencers.',
-      'LinkedIn Ads: Develop and manage targeted ad campaigns to reach decision-makers in your industry.',
-      'Analytics and Insights: Monitor your LinkedIn activity to gain insights and improve your strategy.'
+      'Site Speed Optimization: Improve page load times for better user experience and higher rankings.',
+      'Mobile Optimization: Ensure your website is mobile-friendly and responsive.',
+      'XML Sitemaps: Create and submit XML sitemaps to help search engines crawl and index your site.',
+      'Schema Markup: Implement structured data to provide search engines with detailed information.',
+      'HTTPS Implementation: Ensure your website is secure by using HTTPS.',
+      'Crawl Error Resolution: Identify and fix crawl errors to ensure all pages are accessible.'
+    ]
+  },
+  {
+    title: 'Off-Page Optimization',
+    description: 'Off-page optimization involves activities outside your website to improve its authority and relevance. Our services include:',
+    points: [
+      'Link Building: Acquire high-quality backlinks from reputable websites to boost your site\'s authority.',
+      'Social Media Integration: Promote your content on social media platforms to drive traffic.',
+      'Guest Posting: Publish articles on high-authority sites to build backlinks.',
+      'Online Reputation Management: Monitor and manage your online reputation.'
+    ]
+  },
+  {
+    title: 'Local SEO',
+    description: 'Local SEO helps businesses attract customers from their specific geographic area. Our services include:',
+    points: [
+      'Google My Business Optimization: Optimize your GMB profile with accurate information.',
+      'Local Citations: Ensure your business is listed accurately in local directories.',
+      'Review Management: Encourage and manage customer reviews on platforms like Google and Yelp.',
+      'Local Keyword Optimization: Target keywords relevant to your local audience.',
+      'Local Content Creation: Develop content tailored to local interests and events.'
+    ]
+  },
+  {
+    title: 'SEO Analytics and Reporting',
+    description: 'Measuring the success of your SEO efforts is crucial for continuous improvement. Our services include:',
+    points: [
+      'Performance Tracking: Monitor keyword rankings, organic traffic, and conversions.',
+      'Monthly Reports: Provide detailed reports on SEO performance.',
+      'Data-Driven Insights: Analyze data to identify opportunities, trends, and challenges.',
+      'Goal Setting: Set and track SEO goals to ensure continuous growth.'
     ]
   }
-];
-
-const processSteps = [
-  { number: '01', title: 'Strategy Development', description: 'We analyze your brand and target audience to create a customized SMM strategy.' },
-  { number: '02', title: 'Content Planning', description: 'Our team creates engaging content calendars tailored to each platform.' },
-  { number: '03', title: 'Content Creation', description: 'We design compelling visuals, videos, and copy that resonate with your audience.' },
-  { number: '04', title: 'Launch & Engage', description: 'Your content goes live, and we actively engage with your community.' },
-  { number: '05', title: 'Analytics & Optimization', description: 'We provide detailed reports and refine strategies to maximize engagement.' }
 ];
 
 const whyChooseUs = [
-  { title: 'Expert Team', description: 'Certified professionals with years of experience in social media management.', icon: '🏆' },
-  { title: 'Data-Driven', description: 'Every decision backed by analytics and real-time engagement insights.', icon: '📈' },
-  { title: 'Custom Strategies', description: 'Tailored solutions that align with your unique brand identity.', icon: '🎯' },
-  { title: 'Proven Results', description: '500+ successful campaigns with measurable engagement for clients.', icon: '⭐' },
+  { title: 'Expert SEO Specialists', description: 'Certified professionals with years of experience in SEO.', icon: '🏆' },
+  { title: 'Data-Driven', description: 'Every strategy backed by analytics and research.', icon: '📈' },
+  { title: 'Custom Solutions', description: 'Tailored SEO strategies that align with your business goals.', icon: '🎯' },
+  { title: 'Proven Results', description: '500+ successful SEO campaigns with measurable growth.', icon: '⭐' },
 ];
 
 function AnimatedBackground() {
@@ -113,10 +154,10 @@ function Navbar({ isScrolled, mobileMenuOpen, setMobileMenuOpen }) {
   );
 }
 
-function SMMHeroPage() {
+function SEOHeroPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activePlatform, setActivePlatform] = useState(0);
+  const [activeService, setActiveService] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -135,7 +176,7 @@ function SMMHeroPage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActivePlatform((prev) => (prev + 1) % smmPlatforms.length);
+      setActiveService((prev) => (prev + 1) % seoServices.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -151,7 +192,7 @@ function SMMHeroPage() {
 
       <section className="smm-hero">
         <video autoPlay loop muted playsInline className="hero-video">
-          <source src="https://res.cloudinary.com/dadofd9d2/video/upload/v1773029543/grok-video-50f1898c-a59c-45a0-bf67-47fae3472933_yhxppr.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dadofd9d2/video/upload/v1773032943/grok-video-b8abe594-3e95-457c-b1ff-7131bdd67972_eo4w7c.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay"></div>
         <div className="floating-shapes">
@@ -167,14 +208,14 @@ function SMMHeroPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="hero-badge">
-              <span>✦</span> SMM Services
+              <span>✦</span> SEO Services
             </div>
             <h1 className="hero-title">
-              <span className="line">Social Media</span>
-              <span className="line highlight">Management</span>
+              <span className="line">Don't Just Post, Engage:</span>
+              <span className="line highlight">Elevate Your Brand</span>
             </h1>
             <p className="hero-tagline">
-              Don't Just Post, Engage: Elevate Your Brand with Strategic Social Media Management
+              Boost Your Rankings with Strategic Search Engine Optimization
             </p>
             <div className="hero-cta">
               <Link to="/contact" className="btn-primary">Get a Quote</Link>
@@ -193,25 +234,25 @@ function SMMHeroPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2>Social Media Platforms</h2>
-            <p>We manage your presence on all major social media platforms</p>
+            <h2>SEO Services We Provide</h2>
+            <p>Comprehensive SEO solutions tailored to your business needs</p>
           </motion.div>
           <div className="smm-platforms-grid">
-            {smmPlatforms.map((platform, index) => (
+            {seoServices.map((service, index) => (
               <motion.div 
-                key={platform.name}
-                className={`smm-platform-card ${activePlatform === index ? 'active' : ''}`}
+                key={service.title}
+                className={`smm-platform-card ${activeService === index ? 'active' : ''}`}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                onClick={() => setActivePlatform(index)}
+                onClick={() => setActiveService(index)}
               >
-                <span className="smm-platform-icon">{platform.icon}</span>
-                <h3>{platform.name}</h3>
-                <p>{platform.description}</p>
+                <span className="smm-platform-icon">{service.icon}</span>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
                 <div className="smm-platform-features">
-                  {platform.features.slice(0, 2).map((feature, i) => (
+                  {service.features.slice(0, 2).map((feature, i) => (
                     <span key={i} className="feature-tag">{feature}</span>
                   ))}
                 </div>
@@ -223,9 +264,9 @@ function SMMHeroPage() {
 
       <section className="smm-details-section">
         <div className="container">
-          {platformDetails.map((platform, index) => (
+          {seoDetails.map((detail, index) => (
             <motion.div 
-              key={platform.name}
+              key={detail.title}
               className="smm-detail-card"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -233,48 +274,18 @@ function SMMHeroPage() {
               transition={{ delay: index * 0.1 }}
             >
               <div className="smm-detail-header">
-                <span className="smm-detail-icon">{smmPlatforms[index].icon}</span>
-                <h3>{platform.name}</h3>
+                <span className="smm-detail-icon">{seoServices[index].icon}</span>
+                <h3>{detail.title}</h3>
               </div>
-              <p className="smm-detail-desc">{platform.fullDescription}</p>
+              <p className="smm-detail-desc">{detail.description}</p>
               <ul className="smm-detail-list">
-                {platform.points.map((point, i) => (
+                {detail.points.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
               </ul>
               <Link to="/contact" className="btn-primary">Get a Quote</Link>
             </motion.div>
           ))}
-        </div>
-      </section>
-
-      <section className="smm-process-section">
-        <div className="container">
-          <motion.div 
-            className="section-header"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2>SMM Process Timeline</h2>
-            <p>Our proven process ensures maximum engagement</p>
-          </motion.div>
-          <div className="smm-process-grid">
-            {processSteps.map((step, index) => (
-              <motion.div 
-                key={step.number}
-                className="smm-process-card"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <span className="process-number">{step.number}</span>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -324,8 +335,8 @@ function SMMHeroPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2>Ready to Boost Your Social Media Presence?</h2>
-              <p>Let's create a customized SMM strategy that drives engagement.</p>
+              <h2>Ready to Boost Your Rankings?</h2>
+              <p>Let's create a customized SEO strategy that drives organic growth.</p>
               <Link to="/contact" className="btn-primary">GET A FREE CONSULTATION</Link>
             </motion.div>
             <motion.div 
@@ -427,4 +438,4 @@ function SMMHeroPage() {
   );
 }
 
-export default SMMHeroPage;
+export default SEOHeroPage;
